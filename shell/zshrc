@@ -1,0 +1,22 @@
+# If not running interactively, do not do anything
+[[ $- != *i* ]] && return
+# Otherwise start tmux
+[[ -z "$TMUX" ]] && exec tmux
+
+# PROMPT="%F{blue}%n%f@%F{green}%m%f %1~ %# "
+PROMPT='%F{green}%m %F{magenta}%~ %F{cyan}%(!.#.>) %F{reset_color} '
+
+alias ls='gls --color'
+
+alias la='ls -altr'
+alias grep='egrep --color=auto'
+
+export COPYFILE_DISABLE=1
+alias tar='/usr/bin/tar --exclude ".*"'
+alias mp='cd ~/dev/maintenance-planner && sh maintenance_planner.sh'
+alias tm='tmux new -t tmux'
+
+bindkey -v
+export KEYTIMEOUT=1
+
+PATH="/usr/local/opt/coreutils/libexec/gnubin:/Users/kplante/Library/Python/3.8/bin:$PATH"
