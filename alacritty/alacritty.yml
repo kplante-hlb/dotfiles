@@ -89,9 +89,12 @@ live_config_reload: true
 
 Default:
 shell:
-  program: /usr/bin/tmux
+  program: /usr/bin/toolbox
   args:
-    - new-session
+    - run 
+    - -c 
+    - base 
+    - tmux
 
 mouse_bindings:
   - { mouse: Right,                 action: ExpandSelection }
