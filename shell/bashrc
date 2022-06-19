@@ -84,6 +84,7 @@ alias paste='xclip -selection clipboard -o'
 alias imgcopy='xclip -selection clipboard -t image/jpg'
 alias imgpaste="xclip -selection clipboard -t image/png -o > $( date +%Y-%m-%d-%H-%M-%S)'.png'"
 alias tm='tmux new -t tmux'
+alias qr='qrencode -t ansiutf8 -l H'
 
 export EDITOR=vim
 export HISTTIMEFORMAT='%F %T '
