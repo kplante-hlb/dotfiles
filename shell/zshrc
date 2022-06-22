@@ -1,7 +1,7 @@
-# If not running interactively, do not do anything
-[[ $- != *i* ]] && return
-# Otherwise start tmux
-[[ -z "$TMUX" ]] && exec tmux
+## If not running interactively, do not do anything
+#[[ $- != *i* ]] && return
+## Otherwise start tmux
+#[[ -z "$TMUX" ]] && exec tmux
 
 # PROMPT="%F{blue}%n%f@%F{green}%m%f %1~ %# "
 PROMPT='%F{green}%m %F{magenta}%~ %F{cyan}%(!.#.>) %F{reset_color} '
@@ -15,6 +15,7 @@ export COPYFILE_DISABLE=1
 alias tar='/usr/bin/tar --exclude ".*"'
 alias mp='cd ~/dev/maintenance-planner && sh maintenance_planner.sh'
 alias tm='tmux new -t tmux'
+alias qr='qrencode -t ansiutf8 -l H'
 
 bindkey -v
 export KEYTIMEOUT=1
